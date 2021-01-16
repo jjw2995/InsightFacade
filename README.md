@@ -1,8 +1,8 @@
-Since UBC does prefer students to keep this project in secret, I'll show the parts that I'm most proud of 
+Since UBC prefers students to keep this project private, I'll only show the snippets that I'm most proud of 
 
-after zip files have been processed and stored internally, when user requests a query, it calls perform query function below.
+After zip files have been processed and stored internally, when user requests a query, it calls perform query function below.
 
-It then calls on Where, Tranformations, and Options classes which processes the query in question
+It then calls on Where, Tranformations, and Options classes which together processes the query in question
 
 ```js
     // example query
