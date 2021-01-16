@@ -1,4 +1,4 @@
-UBC CPSC-310 asks students to keep this project private, so I'll only show the snippets that I'm most proud of 
+**UBC CPSC310** asks students to keep this project private, so I'll only show the snippets that I'm most proud of 
 
 After zip files have been processed and stored internally, when user requests a query, it calls perform query function below.
 
