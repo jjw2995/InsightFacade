@@ -5,37 +5,41 @@ After zip files have been processed and stored internally, when user requests a 
 It then calls on Where, Tranformations, and Options classes which together processes the query in question
 
 ```js
-    // example query
+// EXAMPLE QUERY
 
-    // "WHERE": {
-    //     "AND": [{
-    //         "IS": {
-    //             "rooms_furniture": "*Tables*"
-    //         }
-    //     }, {
-    //         "GT": {
-    //             "rooms_seats": 300
-    //         }
-    //     }]
-    // },
-    // "OPTIONS": {
-    //     "COLUMNS": [
-    //         "rooms_shortname",
-    //         "maxSeats"
-    //     ],
-    //     "ORDER": {
-    //         "dir": "DOWN",
-    //         "keys": ["maxSeats"]
-    //     }
-    // },
-    // "TRANSFORMATIONS": {
-    //     "GROUP": ["rooms_shortname"],
-    //     "APPLY": [{
-    //         "maxSeats": {
-    //             "MAX": "rooms_seats"
-    //         }
-    //     }]
-    // }
+// {
+//   "WHERE": {
+//       "AND": [{
+//           "IS": {
+//               "rooms_furniture": "*Tables*"
+//           }
+//       }, {
+//           "GT": {
+//               "rooms_seats": 300
+//           }
+//       }]
+//   },
+//   "OPTIONS": {
+//       "COLUMNS": [
+//           "rooms_shortname",
+//           "maxSeats"
+//       ],
+//       "ORDER": {
+//           "dir": "DOWN",
+//           "keys": ["maxSeats"]
+//       }
+//   },
+//   "TRANSFORMATIONS": {
+//       "GROUP": ["rooms_shortname"],
+//       "APPLY": [{
+//           "maxSeats": {
+//               "MAX": "rooms_seats"
+//           }
+//       }]
+//   }
+// }
+
+    
     public performQuery(query: any): Promise <any[]> {
         try {
             this.keepIDsInSync();
